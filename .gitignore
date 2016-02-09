@@ -1,3 +1,14 @@
+.DS_Store
+*~
+hw1/lambda/lambda
+
+# generated lexer and parser
+lexer.ml
+parser.ml
+parser.mli
+parser.output
+
+# OCaml
 *.annot
 *.cmo
 *.cma
