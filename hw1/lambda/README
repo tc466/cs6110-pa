@@ -1,0 +1,58 @@
+See Homework 1 for instructions.
+
+File Descriptions
+-----------------
+  - ast.ml    
+      Defines the datatypes for the abstract syntax trees (ASTs) for
+      both the source and target languages as well as pretty printers.
+
+  - lambda.ml
+      The interpreter for the ASTs. You need to implement an
+      interpreter for the target language. 
+
+  - lexer.mll
+  - parser.mly
+      A lexer and parser for the source and target languages.
+
+  - repl.ml
+      The top-level code that reads in a lambda term and evaluates it. 
+
+  - util.ml
+      Some utility functions. 
+
+Compilation Instructions
+------------------------
+
+  If you have make installed, you can simply type "make" at the
+  command line. Otherwise, if you are on a Windows machine, you can
+  edit the make.bat file to point to your installation of Ocaml, and
+  execute the make.bat file. If neither of these methods work, you
+  should execute the commands listed in the make.bat file.
+
+  Successful compilation will produce an executable file called "lamda".
+
+
+Examples
+--------
+
+Here are some example terms to play with: 
+
+id = fun x -> x 
+tt = fun x y -> x 
+ff = fun x y -> y
+cond = fun x y z -> x y z 
+zero = ff 
+succ = fun n f x -> f (n f x) 
+one = succ zero 
+two = succ one 
+plus = fun n1 n2 -> n1 succ n2 
+four = (plus two) two 
+
+You can use the let-bindings in the source language to assign
+convenient names for these terms. For example, to evaluate one, you
+could type the following lines at the top-level prompt:
+
+let ff = fun x y -> y in 
+let zero = ff in 
+let succ = fun n f x -> f (n f x) in 
+succ zero 

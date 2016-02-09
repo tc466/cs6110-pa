@@ -1,0 +1,56 @@
+Tests
+
+(fun x -> x) (fun y -> y)
+
+(fun x -> x) y
+
+(fun x -> (fun x -> x) ) (fun y -> y)
+
+(fun x -> (fun z -> z) ) (fun y -> y)
+
+
+let id = fun x -> x in
+let tt = fun x y -> x in
+let ff = fun x y -> y in
+let cond = fun x y z -> x y z in
+let zero = ff in
+let succ = fun n f x -> f (n f x) in
+succ zero
+
+Result: fun f -> fun x -> f (((fun x -> (fun y -> y)) f) x)
+
+
+let id = fun x -> x in
+let tt = fun x y -> x in
+let ff = fun x y -> y in
+let cond = fun x y z -> x y z in
+let zero = ff in
+let succ = fun n f x -> f (n f x) in
+let one = succ zero in
+succ one
+
+Result: fun f -> fun x -> f (((fun f -> (fun x -> f (((fun x -> (fun y -> y)) f) x))) f) x)
+
+
+let id = fun x -> x in
+let tt = fun x y -> x in
+let ff = fun x y -> y in
+let cond = fun x y z -> x y z in
+let zero = ff in
+let succ = fun n f x -> f (n f x) in
+let one = succ zero in
+let two = succ one in
+let plus = fun n1 n2 -> n1 succ n2 in
+(plus two) two
+
+let id = fun x -> x in
+let tt = fun x y -> x in
+let ff = fun x y -> y in
+let cond = fun x y z -> x y z in
+let zero = ff in
+let succ = fun n f x -> f (n f x) in
+let one = succ zero in
+let two = succ one in
+let plus = fun n1 n2 -> n1 succ n2 in
+let four = (plus two) two in
+(plus four) four
