@@ -7,5 +7,7 @@ Each programming assignment is located in a sub-directory.
 
 * hw1 - Homework 1
   - lambda - λ-calculus interpreter
+* hw2 - Homework 2
+  - imp - IMP interpreter
 
 

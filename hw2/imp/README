@@ -1,0 +1,30 @@
+See Homework 2 for instructions.
+
+File Descriptions
+-----------------
+  - ast.ml    
+      Defines datatypes for representing IMP abstract syntax trees.
+
+  - state.ml
+     Defines a representation for stores. 
+
+  - eval.ml
+      The interpreter for the ASTs. 
+
+  - lexer.mll
+  - parser.mly
+      A lexer and parser for IMP.
+
+  - main.ml
+      The top-level read-eval-print loop. 
+
+  - examples
+      A directory containing some sample programs. 
+
+Compilation Instructions
+------------------------
+  If you have make installed, you can simply type "make" at the
+  command line. If this method does not work, you can execute the
+  commands listed in the make.bat file.
+
+  Successful compilation will produce an executable file called "imp".
