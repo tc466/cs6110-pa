@@ -1,13 +1,24 @@
-Tests
+= Tests =
+
+== Safe substitution ==
+
+(fun x -> (fun y -> x)) (fun z -> y)
+Result: fun a -> fun z -> y
+
+(fun x -> (fun y -> x)) (fun u -> y z)
+Result: fun a -> fun u -> y z
+
+(fun x -> (fun y -> x z)) (fun u -> y)
+Result: fun a -> (fun u -> y) z
 
 (fun x -> x) (fun y -> y)
-
-(fun x -> x) y
+Result: fun y -> y
 
 (fun x -> (fun x -> x) ) (fun y -> y)
+Result: fun x -> x
 
 (fun x -> (fun z -> z) ) (fun y -> y)
-
+Result: fun z -> z
 
 let id = fun x -> x in
 let tt = fun x y -> x in
