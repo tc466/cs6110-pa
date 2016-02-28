@@ -6,7 +6,7 @@ open Ast
 %token PLUS MINUS TIMES DIV MOD
 %token EQ LEQ LT GEQ GT
 %token LPAREN RPAREN LBRACE RBRACE
-%token ASSG COMP SKIP IF ELSE WHILE PRINT INPUT
+%token ASSG COMP SKIP IF ELSE WHILE FOR PRINT INPUT
 %token <string> VAR
 %token <int> NUMBER
 %token EOL
@@ -21,7 +21,7 @@ open Ast
 %left AND OR
 %nonassoc NOT
 %nonassoc COMP
-%nonassoc SKIP IF ELSE WHILE PRINT INPUT
+%nonassoc SKIP IF ELSE WHILE FOR PRINT INPUT
 %nonassoc ASSG
 %nonassoc LPAREN LBRACE /* highest precedence - always shift */
 
@@ -45,6 +45,7 @@ comlist:
 
 com:
   | WHILE LPAREN bexp RPAREN com { While ($3, $5) }
+  | FOR LPAREN aexp RPAREN com { For ($3, $5) }
   | IF LPAREN bexp RPAREN com ELSE com { Cond ($3, $5, $7) }
   | IF LPAREN bexp RPAREN combr ELSE com { Cond ($3, $5, $7) }
   | VAR ASSG aexp { Assg ($1, $3) }
@@ -55,6 +56,7 @@ com:
 combr:
   | LBRACE comlist RBRACE { $2 }
   | WHILE LPAREN bexp RPAREN combr { While ($3, $5) }
+  | FOR LPAREN aexp RPAREN combr { For ($3, $5) }  
   | IF LPAREN bexp RPAREN com ELSE combr { Cond ($3, $5, $7) }
   | IF LPAREN bexp RPAREN combr ELSE combr { Cond ($3, $5, $7) }
 ;
