@@ -13,6 +13,7 @@ rule token = parse
   | "if"    { IF }
   | "else"  { ELSE }
   | "while" { WHILE }
+  | "for"   { FOR }
   | "print" { PRINT }
   | "input" { INPUT }
   | alph rest as id { VAR id }

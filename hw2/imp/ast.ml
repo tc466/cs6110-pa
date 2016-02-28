@@ -23,6 +23,7 @@ type bexp =
 
 type com =
   | While of bexp * com
+  | For of aexp * com
   | Cond of bexp * com * com
   | Comp of com * com
   | Assg of string * aexp
