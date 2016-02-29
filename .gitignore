@@ -1,6 +1,7 @@
 .DS_Store
 *~
 hw1/lambda/lambda
+hw2/imp/imp
 
 # generated lexer and parser
 lexer.ml
