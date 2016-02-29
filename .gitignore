@@ -2,6 +2,7 @@
 *~
 hw1/lambda/lambda
 hw2/imp/imp
+test.log
 
 # generated lexer and parser
 lexer.ml
