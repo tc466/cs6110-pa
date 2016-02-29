@@ -1,0 +1,7 @@
+n := input;
+if (0 > n)
+    print 255
+else if (0 < n)
+    print 1
+else
+    print 0;

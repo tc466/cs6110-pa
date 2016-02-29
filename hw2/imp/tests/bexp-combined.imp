@@ -1,0 +1,68 @@
+x := 3;
+y := 5;
+z := -3;
+w := 5;
+if (true)
+    print 1
+else
+    print 0;
+if (false)
+    print 1
+else
+    print 0;
+if (x < y)
+    print 1
+else
+    print 0;
+if (x > y)
+    print 1
+else
+    print 0;
+if (y < z)
+    print 1
+else
+    print 0;
+if (x = -z)
+    print 1
+else
+    print 0;
+if (w = x)
+    print 1
+else
+    print 0;
+if (~(x = x))
+    print 1
+else
+    print 0;
+if (true & true)
+    print 1
+else
+    print 0;
+if (true & false)
+    print 1
+else
+    print 0;
+if (false & true)
+    print 1
+else
+    print 0;
+if (false & false)
+    print 1
+else
+    print 0;
+if (true | true)
+    print 1
+else
+    print 0;
+if (true | false)
+    print 1
+else
+    print 0;
+if (false | true)
+    print 1
+else
+    print 0;
+if (false | false)
+    print 1
+else
+    print 0;
