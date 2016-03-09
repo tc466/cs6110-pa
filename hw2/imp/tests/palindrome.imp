@@ -1,0 +1,13 @@
+n := input;
+reverse := 0;
+temp := n;
+
+while (~(temp = 0)) {
+    reverse := (reverse * 10) + (temp % 10);
+    temp    := temp / 10;
+}
+
+if (n = reverse)
+    print 1
+else
+    print 0;

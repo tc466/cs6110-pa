@@ -1,0 +1,5 @@
+x := 8;
+x := 4 - x;
+y := x - (x - x) - 3;
+print x;
+print y;
