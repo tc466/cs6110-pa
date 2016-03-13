@@ -1,0 +1,34 @@
+See Homework 3 for instructions.
+
+File Descriptions
+-----------------
+  - ast.ml    
+      Defines the datatypes for the abstract syntax trees (ASTs) for
+      both the source and target languages as well as pretty printers.
+
+  - eval.ml
+      The interpreter for the ASTs. 
+
+  - lexer.mll
+  - parser.mly
+      A lexer and parser for the source and target languages.
+
+  - repl.ml
+      The top-level code that reads in a lambda term and evaluates it. 
+
+  - state.ml
+      A representation for environments and functions on environments
+
+  - lifting.ml
+      The functions that translate from source to target language. You
+      need to implement these.
+  
+  - examples
+      A directory with some test files
+
+Compilation Instructions
+------------------------
+
+  If you have make installed, you can simply type "make" at the
+  command line. Successful compilation will produce an executable file
+  called "fl".
