@@ -2,6 +2,7 @@
 *~
 hw1/lambda/lambda
 hw2/imp/imp
+hw3/lifting/fl
 test.log
 
 # generated lexer and parser
