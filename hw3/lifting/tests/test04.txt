@@ -1,0 +1,2 @@
+let add3 x = x + 3 in
+add3 10

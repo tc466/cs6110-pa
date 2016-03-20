@@ -1,0 +1,3 @@
+let add1 = fun x -> x + 1 in
+let add2 = fun x -> x + 2 in
+add1 (add2 10)
