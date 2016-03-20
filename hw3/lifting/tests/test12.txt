@@ -1,0 +1,4 @@
+let a = fun sum n m s -> if n < m then s else ((sum (m + 1)) (s + m)) in
+let rec b = fun a n m s -> (((a ((b a) n)) n m) s) in
+let c = fun sum -> ((sum 0) 0) in
+(c ((b a) 100))

@@ -1,0 +1,2 @@
+let a = fun fact n -> if n <= 1 then 1 else n * fact fact (n - 1) in
+a a 4

@@ -1,0 +1,3 @@
+let a = fun fact n m -> if n <= m then 1 else n * fact (n - 1) m in
+let rec b = fun a n m -> a (b a) n m in
+b a 4 1
