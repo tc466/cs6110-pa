@@ -9,5 +9,7 @@ Each programming assignment is located in a sub-directory.
   - lambda - λ-calculus interpreter
 * hw2 - Homework 2
   - imp - IMP interpreter
+* hw3 - Homework 3
+  - lifting - Lambda lifting
 
 
