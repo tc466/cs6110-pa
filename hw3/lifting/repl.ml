@@ -80,6 +80,6 @@ let rec repl() : unit =
   repl()
   
 let _ =
-  print_endline "FL version 2016.0";
+  print_endline "FL version 2016.3";
   try repl()
   with Quit -> ()
